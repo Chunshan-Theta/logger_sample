@@ -7,12 +7,7 @@ from logging import config
 #* logging.error()
 #* logging.critical()
 
-#logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger('coder')
-hdlr = logging.FileHandler('coder.log')
-formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-hdlr.setFormatter(formatter)
-logger.addHandler(hdlr) 
-logger.setLevel(logging.WARNING)
-logger.error('We have a problem')
-logger.info('While this is just chatty')
+logging.basicConfig(level=logging.INFO)
+
+logging.error('We have a problem')
+logging.info('While this is just chatty')
